@@ -1,8 +1,8 @@
 package org.example;
 
-public class SynchronizedIssueSolution_CustomObject {
+public class S3_SynchronizedIssueSolution_CustomObject {
 
-    //Instead of synchronized keyword use object lock
+    //Instead of synchronized keyword, use object locking
 
     public static Object lock1 = new Object();
     public static Object lock2 = new Object();

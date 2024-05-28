@@ -1,23 +1,19 @@
 package org.example;
 
-public class S2_SynchronizedKeywordIssue2 {
+public class S1_SynchronizedKeywordIssue1 {
+
     //Below code has class level lock
-    public static void method1() {
-        synchronized(S2_SynchronizedKeywordIssue2.class) {
-            try{
-                Thread.sleep(5000);
-                System.out.println("From thread 1 ");
-            }catch (Exception e) {
+    public static synchronized void method1() {
+        try{
+            Thread.sleep(5000);
+            System.out.println("From thread 1 ");
+        }catch (Exception e) {
 
-            }
         }
-
     }
 
     public static synchronized void method2() {
-        synchronized(S2_SynchronizedKeywordIssue2.class) {
-            System.out.println("From thread 2 ");
-        }
+        System.out.println("From thread 2 ");
     }
 
     public static void main(String[] args) {
